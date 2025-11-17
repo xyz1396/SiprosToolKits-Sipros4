@@ -2,13 +2,38 @@
 
 This repository contains tools for stable isotopic mass spectrometry-based metaproteomics research developed by Sipros team. These include Raxport, SiprosV4, SiprosEnsemble and some scripts
 
-[You can find the simple tutorial for 13C-labeled E. coli on our wiki page](https://github.com/xyz1396/SiprosToolKits/wiki/13C-labeled-E.-coli-SIP-proteomic-search-tutorial)
+[You can find the simple tutorial for 13C-labeled E. coli on our wiki page](https://github.com/thepanlab/SiprosToolKits/wiki/13C-labeled-E.-coli-SIP-proteomic-search-tutorial)
 
 ### Citation
 
-under review
+Xiong, Yi, Ryan S. Mueller, Shichao Feng, Xuan Guo, and Chongle Pan. "Proteomic stable isotope probing with an upgraded Sipros algorithm for improved identification and quantification of isotopically labeled proteins." Microbiome 12 (2024).
 
-### Install environment
+### install sipros conda environment (recommand)
+
+[sipros on bioconda](https://anaconda.org/bioconda/sipros)
+
+```bash
+conda create -n sipros bioconda::sipros
+conda activate sipros
+# get help
+copyConfigTemplate -h
+Raxport -h
+SiprosEnsembleOMP -h
+EnsembleScripts_sipros_prepare_protein_database -h
+EnsembleScripts_sipros_psm_tabulating -h
+EnsembleScripts_sipros_ensemble_filtering -h
+EnsembleScripts_sipros_peptides_assembling -h
+V4Scripts_refineProteinFDR -help
+V4Scripts_getSpectraCountInEachFT -help
+V4Scripts_makeDBforLabelSearch -help
+SiprosV4OMP -h
+V4Scripts_sipros_peptides_filtering -h
+V4Scripts_sipros_peptides_assembling -h
+V4Scripts_ClusterSip -h
+V4Scripts_getLabelPCTinEachFT -help
+```
+
+### Install environment by yourself
 
 Raxport relies on .net. Some scripts rely on python2 and R.
 
